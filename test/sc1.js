@@ -23,7 +23,7 @@ contract('Sc1', function(accounts) {
         return SubCurrency.deployed().then(function(instance) {
             meta = instance;
 
-        // Do all the minting up front so I can mess with the
+        // Do all the minting up front so I can play with the
         // ability for others besides the minter to mint coins
 
             return meta.mint(ac1, amount3);
@@ -34,7 +34,6 @@ contract('Sc1', function(accounts) {
 
             return meta.mint(ac3, amount1);
         }).then(function() {
-
 
             return meta.sendCoin(ac2, amount);
         }).then(function() {
